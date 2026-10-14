@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Training Course | Registration</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:24px 14px;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f1f5f9;color:#172033;line-height:1.7}
+.wrap{max-width:760px;margin:auto;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(15,23,42,.12)}
+.hero{padding:32px 24px;text-align:center;color:#fff;background:linear-gradient(135deg,#0f172a,#1d4ed8 65%,#06b6d4)}
+.brandline{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{width:62px;height:62px;background:#fff;border-radius:15px;display:grid;place-items:center;overflow:hidden;color:#1d4ed8;font-size:23px;font-weight:900}
+.logo img{width:100%;height:100%;object-fit:contain}
+.brand{font-weight:700}
+.logo-upload{max-width:350px;margin:14px auto 0;text-align:left;background:#ffffff1c;padding:10px 12px;border-radius:10px;font-size:12px}
+.logo-upload label{color:#fff}
+.logo-upload input{width:100%;margin-top:5px;color:#fff;font-size:12px}
+h1{font-size:clamp(27px,5vw,38px);line-height:1.25;margin:22px 0 8px}
+.hero p{margin:0;color:#e0f2fe}
+.content{padding:28px}
+h2{margin:0 0 8px;font-size:23px;color:#0f172a}
+.muted{color:#64748b;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:6px}
+.full{grid-column:1/-1}
+label{font-weight:700;font-size:14px;color:#334155}
+input,select,textarea{font:inherit;width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:#0f172a}
+input:focus,select:focus,textarea:focus{outline:2px solid #93c5fd;border-color:#2563eb}
+textarea{min-height:95px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:10px;padding:13px 18px;font-size:15px;font-weight:700;text-decoration:none;cursor:pointer;color:#fff;background:#2563eb}
+.btn.green{background:#16a34a}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.actions .btn{flex:1}
+.info{margin-top:22px;padding:15px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;font-size:14px}
+.status{font-size:13px;color:#475569;margin-top:12px}
+footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:22px;font-size:13px}
+footer a{color:#93c5fd;text-decoration:none}
+@media(max-width:560px){body{padding:0}.wrap{border-radius:0}.content{padding:22px}.grid{grid-template-columns:1fr}.full{grid-column:auto}.actions{flex-direction:column}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div class="brandline">
+    <div class="logo" id="logoBox"><span id="logoText">AI</span><img id="logoPreview" alt="প্রতিষ্ঠানের লোগো" hidden></div>
+    <div class="brand" id="brandName">[প্রতিষ্ঠানের নাম]</div>
+  </div>
+  <div class="logo-upload">
+    <label for="logoInput">🖼️ প্রতিষ্ঠানের Logo নির্বাচন করুন</label>
+    <input id="logoInput" type="file" accept="image/*">
+    <div>লোগো এই ব্রাউজারে প্রিভিউ হবে। স্থায়ী লোগোর জন্য ছবিটি হোস্ট করে HTML-এ যুক্ত করুন।</div>
+  </div>
+  <h1>AI Training Course<br>Registration Form</h1>
+  <p>AI শিখুন, দক্ষতা বাড়ান, ক্যারিয়ারে এগিয়ে যান।</p>
+</header>
+<section class="content">
+  <h2>📝 ভর্তি ফর্ম</h2>
+  <p class="muted">অনুগ্রহ করে নিচের তথ্যগুলো সঠিকভাবে পূরণ করুন। (*) চিহ্নিত ঘরগুলো আবশ্যক।</p>
+  <form id="registrationForm">
+    <div class="grid">
+      <div class="field">
+        <label for="fullName">আপনার পূর্ণ নাম *</label>
+        <input id="fullName" name="fullName" required maxlength="100" placeholder="আপনার নাম">
+      </div>
+      <div class="field">
+        <label for="phone">মোবাইল নম্বর *</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" required maxlength="20" placeholder="01XXXXXXXXX">
+      </div>
+      <div class="field">
+        <label for="email">ইমেইল (ঐচ্ছিক)</label>
+        <input id="email" name="email" type="email" maxlength="120" placeholder="name@example.com">
+      </div>
+      <div class="field">
+        <label for="occupation">আপনি কী করেন? *</label>
+        <select id="occupation" name="occupation" required>
+          <option value="">নির্বাচন করুন</option>
+          <option>শিক্ষার্থী</option><option>চাকরিজীবী</option><option>ফ্রিল্যান্সার</option><option>ব্যবসায়ী / উদ্যোক্তা</option><option>অন্যান্য</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mode">প্রশিক্ষণ পদ্ধতি *</label>
+        <select id="mode" name="mode" required>
+          <option value="">নির্বাচন করুন</option><option>Online</option><option>Offline</option><option>যেকোনোটি</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="district">জেলা (ঐচ্ছিক)</label>
+        <input id="district" name="district" maxlength="80" placeholder="আপনার জেলা">
+      </div>
+      <div class="field full">
+        <label for="message">প্রশ্ন বা মন্তব্য (ঐচ্ছিক)</label>
+        <textarea id="message" name="message" maxlength="500" placeholder="কোর্স সম্পর্কে কিছু জানতে চাইলে লিখুন"></textarea>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn green" type="submit">WhatsApp-এ আবেদন পাঠান ↗</button>
+      <a class="btn" href="https://wa.me/8801894408379" target="_blank" rel="noopener noreferrer">সরাসরি WhatsApp যোগাযোগ</a>
+    </div>
+    <p class="status" id="status" role="status">ফর্ম জমা দিলে WhatsApp-এ আপনার তথ্যসহ একটি বার্তা তৈরি হবে। WhatsApp-এ গিয়ে Send চাপতে হবে।</p>
+  </form>
+  <div class="info">
+    <strong>📌 গুরুত্বপূর্ণ তথ্য</strong><br>
+    • এই ফর্মটি আলাদা HTML পেজ হিসেবে কাজ করে।<br>
+    • আবেদন পাঠাতে WhatsApp ব্যবহার করা হয়; তথ্য কোনো Database-এ স্বয়ংক্রিয়ভাবে সংরক্ষিত হয় না।<br>
+    • কোর্সের তারিখ, ফি ও প্রতিষ্ঠানের নাম নিশ্চিত হলে পেজে যোগ করুন।
+  </div>
+</section>
+<footer>
+  <strong id="footerBrand">[প্রতিষ্ঠানের নাম]</strong><br>
+  WhatsApp: <a href="https://wa.me/8801894408379" target="_blank" rel="noopener noreferrer">+880 1894-408379</a><br>
+  [ওয়েবসাইট] · [যোগাযোগের ঠিকানা]
+</footer>
+</main>
+<script>
+const ORGANIZATION_NAME = "[প্রতিষ্ঠানের নাম]"; // এখানে প্রতিষ্ঠানের নাম লিখুন
+document.title = ORGANIZATION_NAME + " | AI Course Registration";
+document.getElementById("brandName").textContent = ORGANIZATION_NAME;
+document.getElementById("footerBrand").textContent = ORGANIZATION_NAME;
+
+let logoUrl = null;
+document.getElementById("logoInput").addEventListener("change", function(){
+  const file = this.files && this.files[0];
+  if(!file) return;
+  if(!file.type.startsWith("image/")){ alert("একটি image file নির্বাচন করুন।"); this.value=""; return; }
+  if(file.size > 5*1024*1024){ alert("লোগোর ফাইল 5 MB-এর কম হতে হবে।"); this.value=""; return; }
+  if(logoUrl) URL.revokeObjectURL(logoUrl);
+  logoUrl = URL.createObjectURL(file);
+  const img = document.getElementById("logoPreview");
+  img.src = logoUrl; img.hidden = false;
+  document.getElementById("logoText").hidden = true;
+});
+
+document.getElementById("registrationForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const get = id => document.getElementById(id).value.trim();
+  const data = {
+    name:get("fullName"), phone:get("phone"), email:get("email"),
+    occupation:get("occupation"), mode:get("mode"), district:get("district"), message:get("message")
+  };
+  if(!data.name || !data.phone || !data.occupation || !data.mode){
+    document.getElementById("status").textContent = "অনুগ্রহ করে সব আবশ্যক ঘর পূরণ করুন।"; return;
+  }
+  const message = [
+    "আসসালামু আলাইকুম। আমি AI Training Course-এ ভর্তি হতে আগ্রহী।",
+    "", "নাম: "+data.name, "মোবাইল: "+data.phone,
+    "ইমেইল: "+(data.email || "দেওয়া হয়নি"),
+    "পেশা: "+data.occupation, "প্রশিক্ষণ পদ্ধতি: "+data.mode,
+    "জেলা: "+(data.district || "দেওয়া হয়নি"),
+    "প্রশ্ন/মন্তব্য: "+(data.message || "নেই")
+  ].join("\n");
+  const url = "https://wa.me/8801894408379?text=" + encodeURIComponent(message);
+  document.getElementById("status").textContent = "WhatsApp খুলুন এবং তথ্য যাচাই করে Send চাপুন।";
+  const win = window.open(url, "_blank", "noopener,noreferrer");
+  if(!win) window.location.href = url;
+});
+</script>
+</body>
+</html>
